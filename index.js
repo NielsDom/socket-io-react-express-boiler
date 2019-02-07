@@ -8,7 +8,7 @@ io.set('origins', '*:*');
 io.on('connection', socket => {
   console.log("web socket connected");
   socket.emit('news', { hello: 'world' });
-  socket.on('channel1', function (data) {
+  socket.on('channel1', data => {
     console.log(data);
   });
   socket.on('channel2', data => console.log(data));
