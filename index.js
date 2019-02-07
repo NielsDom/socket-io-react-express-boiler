@@ -6,7 +6,7 @@ const io = require('socket.io')(server);
 io.set('origins', '*:*');
 
 io.on('connection', socket => {
-	console.log("web socket connected");
+  console.log("web socket connected");
   socket.emit('news', { hello: 'world' });
   socket.on('channel1', function (data) {
     console.log(data);
